@@ -1,3 +1,9 @@
 body{
 	background-color:lightgrey;
 }
+.note{
+	color: #512465;
+}
+.note:before{
+	content: "Note: ";
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="col-xs-12">
+			<h1>HTML Elements</h1>
+		</div>
+		<div class="col-xs-12">
+			<ul>
+				<li>
+					<h2>The Root Element</h2>
+					<ol>
+						<li>
+							<h4>The <strong><code>html</code></strong> element represents the root of an HTML document.</h4>
+							<figure>
+								<pre><code>
+	&lt;!DOCTYPE html&gt;
+	<strong>&lt;html lang="en"&gt;</strong>
+	  &lt;head&gt;
+	    &lt;title&gt;Swapping Songs&lt;/title&gt;
+	  &lt;/head&gt;
+	  &lt;body&gt;
+	    &lt;h1&gt;Swapping Songs&lt;/h1&gt;
+	    &lt;p&gt;Tonight I swapped some of the songs I wrote with some friends.&lt;/p&gt;
+	  &lt;/body&gt;
+	<strong>&lt;html lang="en"&gt;</strong>								
+								</code></pre>
+								<figcaption><p>The html element in the following example declares that the document's language is English.</p></figcaption>
+							</figure>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h2>Document Metadata</h2>
+					<ol>
+						<li>
+							<h4>The head <strong><code>element</code></strong> represents a collection of metadata for the Document.</h4>
+							<figure>
+								<pre><code>
+	&lt;!DOCTYPE HTML&gt;
+	&lt;HTML&gt;
+	  &lt;HEAD&gt;
+	    &lt;META CHARSET="UTF-8"&gt;
+	    &lt;BASE HREF="http://www.example.com/"&gt;
+	    &lt;TITLE&gt;An application with a long head&lt;/TITLE&gt;
+	    &lt;LINK REL="STYLESHEET" HREF="default.css"&gt;
+	    &lt;LINK REL="STYLESHEET ALTERNATE" HREF="big.css" TITLE="Big Text"&gt;
+	    &lt;SCRIPT SRC="support.js"&gt;&lt;/SCRIPT&gt;
+	    &lt;META NAME="APPLICATION-NAME" CONTENT="Long headed application"&gt;
+	  &lt;/HEAD&gt;
+	  &lt;BODY&gt;
+	  ...
+  								</code></pre>
+								<figcaption>
+									<p>The collection of metadata in a head element can be small like just a title or large like the above example.</p>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>title</code></strong> element represents the document's title or name. Authors should use titles that identify their documents</h4>
+							<p>There must be no more than one <code>title</code> element per document.</p>
+							<figure>
+								<pre><code>
+	...								
+	&lt;title&gt;Introduction to The Mating Rituals of Bees&lt;/title&gt;
+	...
+								</pre></code>
+								<figcaption>
+									<p class="note">The <code>title</code> element is a required child in most situations, but when a higher-level protocol provides title information, e.g. in the Subject line of an e-mail when HTML is used as an e-mail authoring format, the title element can be omitted.</p>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>base</code></strong> element allows authors to specify the document base URL for the purposes of resolving relative URLs</h4>
+							<figure>
+								<pre><code>
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	  &lt;head&gt;
+	    &lt;title&gt;This is an example for the &amp;lt;base&amp;gt; element&lt;/title&gt;
+	    <strong>&lt;base href="http://www.example.com/news/index.html"&gt;</strong>
+	  &lt;/head&gt;
+	  &lt;body&gt;
+	    &lt;p&gt;Visit the &lt;a href="archives.html"&gt;archives&lt;/a&gt;.&lt;/p&gt;
+	  &lt;/body&gt;
+	&lt;/html&gt;							
+								</code></pre>
+								<figcaption><p>The link in the above example would be a link to "<a href=" http://www.example.com/news/archives.html"> http://www.example.com/news/archives.html</a>"</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>link</code></strong> element allows authors to link their document to other resources.</h4>
+							<p>The destination of the link(s) is given by the <code>href</code> attribute. A link element must have <code>rel</code> attribute.</p>
+							<figure>
+								<pre><code>
+	...
+	&lt;link rel="stylesheet" href="default.css"&gt;
+	...									
+								</code></pre>
+								<figcaption><p>Here, a <code>link</code> element provide some style sheet</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>meta</code></strong> element represents various kinds of metadata that cannot be expressed using the title, base, link, style, and script elements.</h4>
+							<figure>
+								<pre><code>
+	...
+	&lt;meta charset="utf-8"&gt;
+	&lt;meta http-equiv="Refresh" content="300"&gt;
+	...
+								</pre></code>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>style</code></strong> element allows authors to embed style information in their documents. The style element is one of several inputs to the styling processing model. The element does not represent content for the user.</h4>
+							<figure>
+								<pre><code>
+	...
+	&lt;style&gt;
+	  body { color: black; background: white; }
+	  em { font-style: normal; color: red; }
+	&lt;/style&gt;
+	...
+								</pre></code>
+							</figure>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h2>Scripting</h2>
+					<p>Scripts allow authors to add interactivity to their documents.</p>
+					<ol>
+						<li>
+							<h4>The <strong><code>script</code></strong> element allows authors to include dynamic script and data blocks in their documents. The element does not represent content for the user.</h4>
+							<figure>
+								<pre><code>
+&lt;script src="game-engine.js"&gt;&lt;/script&gt;
+&lt;script type="text/x-game-map"&gt;
+........U.........e
+o............A....e
+.....A.....AAA....e
+.A..AAA...AAAAA...e
+&lt;/script&gt;
+								</code></pre>
+								<figcaption>In the above example, two script elements are used. One embeds an external script, and the other includes some data.</figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>noscript</code></strong> element represents nothing if scripting is enabled, and represents its children if scripting is disabled. It is used to present different markup to user agents that support scripting and those that don't support scripting, by affecting how the document is parsed.</h4>
+							<figure>
+								<pre><code>
+	&lt;form action="calcSquare.php"&gt;
+	  &lt;p&gt;
+	    &lt;label for=x&gt;Number&lt;/label&gt;:
+	    &lt;input id="x" name="x" type="number"&gt;
+	  &lt;/p&gt;
+	  &lt;script&gt;
+	   var x = document.getElementById('x');
+	   var output = document.createElement('p');
+	   output.textContent = 'Type a number; it will be squared right then!';
+	   x.form.appendChild(output);
+	   x.form.onsubmit = function () { return false; }
+	   x.oninput = function () {
+	     var v = x.valueAsNumber;
+	     output.textContent = v + ' squared is ' + v * v;
+	   };
+	  &lt;/script&gt;
+	  &lt;noscript&gt;
+	    &lt;input type=submit value="Calculate Square"&gt;
+	  &lt;/noscript&gt;
+	&lt;/form&gt;
+								</code></pre>
+								<figcaption><p>In the following example, a noscript element is used to provide fallback for a script.</p></figcaption>
+							</figure>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h2>Sections</h2>
+					<ol>
+						<li>
+							<h4>The <strong><code>body</code></strong> element represents the main content of the document.</h4>
+							<figure>
+								<pre><code>
+	&lt;!DOCTYPE HTML&gt;
+	&lt;html&gt;
+	  &lt;head&gt;
+	    &lt;title&gt;Online or offline?&lt;/title&gt;
+	  &lt;/head&gt;
+	  <strong>&lt;body&gt;</strong>
+	    &lt;h1&gt;Your Status &lt;/h1&gt;
+	    &lt;p&gt;You are: &lt;span id="status"&gt;Unknown&lt;/span&gt;&lt;/p&gt;
+	  <strong>&lt;/body&gt;</strong>
+	&lt;/html&gt;
+								</code></pre>
+								<figcaption>
+									<p><code>body</code> element in the above example contains two element h1 and p.</p>
+									<p class="note">There can be only one body element on a Page.</p>
+								</figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>section</code></strong> element represents a generic section of a document or application. A section, in this context, is a thematic grouping of content, typically with a heading.</h4>
+							<figure>
+								<pre><code>
+	&lt;article&gt;
+	  &lt;hgroup&gt;
+	    &lt;h1&gt;Apples&lt;/h1&gt;
+	   &lt;h2&gt;Tasty, delicious fruit!&lt;/h2&gt;
+	  &lt;/hgroup&gt;
+	  &lt;p&gt;The apple is the pomaceous fruit of the apple tree.&lt;/p&gt;
+	  <strong>&lt;section&gt;</strong>
+	    &lt;h1&gt;Red Delicious&lt;/h1&gt;
+	    &lt;p&gt;These bright red apples are the most common found in manysupermarkets.&lt;/p&gt;
+	  <strong>&lt;/section&gt;</strong>
+	  <strong>&lt;section&gt;</strong>
+	    &lt;h1&gt;Granny Smith&lt;/h1&gt;
+	    &lt;p&gt;These juicy, green apples make a great filling forapple pies.&lt;/p&gt;
+	  <strong>&lt;/section&gt;</strong>
+	&lt;/article&gt;
+								</code></pre>
+								<figcaption><p>Notice how the use of <code>section</code> means that the author can use h1 elements throughout, without having to worry about whether a particular section is at the top level, the second level, the third level, and so on.</p></figcaption>	
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>nav</code></strong> element represents a section of a page that links to other pages or to parts within the page: a section with navigation links.</h4>
+							<figure>
+								<pre><code>
+	&lt;body&gt;
+	  &lt;header&gt;
+	    &lt;h1&gt;Wake up sheeple!&lt;/h1&gt;
+	    &lt;p&gt;&lt;a href="news.html"&gt;News&lt;/a&gt; -
+	      &lt;a href="blog.html"&gt;Blog&lt;/a&gt; -
+	      &lt;a href="forums.html"&gt;Forums&lt;/a&gt;&lt;/p&gt;
+	    &lt;p&gt;Last Modified: &lt;time&gt;2009-04-01&lt;/time&gt;&lt;/p&gt;
+	    <strong>&lt;nav&gt;</strong>
+	      &lt;h1&gt;Navigation&lt;/h1&gt;
+	      &lt;ul&gt;
+	        &lt;li&gt;&lt;a href="articles.html"&gt;Index of all articles&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href="today.html"&gt;Things sheeple need to wake up for today&lt;/a&gt;&lt;/li&gt;
+	        &lt;li&gt;&lt;a href="successes.html"&gt;Sheeple we have managed to wake&lt;/a&gt;&lt;/li&gt;
+	      &lt;/ul&gt;
+	    <strong>&lt;/nav&gt;</strong>
+	  &lt;/header&gt;
+	  ...
+	&lt;/body&gt;
+								</code></pre>						
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>article</code></strong> element represents a self-contained composition in a document, page, application, or site and that is, in principle, independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.</h4>
+							<figure>
+								<pre><code>
+	<strong>&lt;article&gt;</strong>
+	  &lt;header&gt;
+	    &lt;h1&gt;The Very First Rule of Life&lt;/h1&gt;
+	    &lt;p&gt;&lt;time pubdate datetime="2009-10-09T14:28-08:00"&gt;&lt;/time&gt;&lt;/p&gt;
+	  &lt;/header&gt;
+	  &lt;p&gt;If there's a microphone anywhere near you, assume it's hot andsending whatever you're saying to the world. Seriously.&lt;/p&gt;
+	  &lt;p&gt;<em>...</em>&lt;/p&gt;
+	  &lt;section&gt;
+	    &lt;h1&gt;Comments&lt;/h1&gt;
+	    <strong>&lt;article&gt;</strong>
+	      &lt;footer&gt;
+	        &lt;p&gt;Posted by: George Washington&lt;/p&gt;
+	        &lt;p&gt;&lt;time pubdate datetime="2009-10-10T19:10-08:00"&gt;&lt;/time&gt;&lt;/p&gt;
+	      &lt;/footer&gt;
+	      &lt;p&gt;Yeah! Especially when talking about your lobbyist friends!&lt;/p&gt;
+	    <strong>&lt;/article&gt;</strong>
+	    <strong>&lt;article&gt;</strong>
+	    &lt;footer&gt;
+	      &lt;p&gt;Posted by: George Hammond&lt;/p&gt;
+	      &lt;p&gt;&lt;time pubdate datetime="2009-10-10T19:15-08:00"&gt;&lt;/time&gt;&lt;/p&gt;
+	    &lt;/footer&gt;
+	    &lt;p&gt;Hey, you have the same first name as me.&lt;/p&gt;
+	    <strong>&lt;/article&gt;</strong>
+	  &lt;/section&gt;
+	<strong>&lt;/article&gt;</strong>
+								</code></pre>
+								<figcaption><p>Notice the use of footer to give the information for each comment (such as who wrote it and when): the footer element can appear at the start of its section when appropriate, such as in this case. (Using header in this case wouldn't be wrong either; it's mostly a matter of authoring preference.)</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The <strong><code>aside</code></strong> element represents a section of a page that consists of content that is tangentially related to the content around the aside element, and which could be considered separate from that content. Such sections are often represented as sidebars in printed typography.</h4>
+							<figure>
+								<pre><code>
+	...
+	&lt;p&gt;He later joined a large company, continuing on the same work.
+	&lt;q&gt;I love my job. People ask me what I do for fun when I'm not at
+	work. But I'm paid to do my hobby, so I never know what to
+	answer. Some people wonder what they would do if they didn't have to
+	work... but I know what I would do, because I was unemployed for a
+	year, and I filled that time doing exactly what I do now.&lt;/q&gt;&lt;/p&gt;
+
+	&lt;aside&gt;
+	  &lt;q&gt; People ask me what I do for fun when I'm not at work. But I'mpaid to do my hobby, so I never know what to answer. &lt;/q&gt;
+	&lt;/aside&gt;
+
+	&lt;p&gt;Of course his work — or should that be hobby? —isn't his only passion. He also enjoys other pleasures.&lt;/p&gt;
+	...
+								</code></pre>
+								<figcaption><p>Above example shows how an aside is used to mark up a pull quote in a longer article.</p></figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4>The elements <strong><code>h1</code> <code>h2</code> <code>h3</code> <code>h4</code> <code>h5</code> <code>h6</code></strong> represent headings for their sections.</h4>
+							<p>The semantics and meaning of these elements are defined in the section on headings and sections.</p>
+							<p>These elements have a rank given by the number in their name. The h1 element is said to have the highest rank, the h6 element has the lowest rank, and two elements with the same name have equal rank.</p>
+							<figure>
+								<pre><code>
+	&lt;body&gt;
+	&lt;h1&gt;Let's call it a draw(ing surface)&lt;/h1&gt;
+	&lt;h2&gt;Diving in&lt;/h2&gt;
+	&lt;h2&gt;Simple shapes&lt;/h2&gt;
+	&lt;h2&gt;Canvas coordinates&lt;/h2&gt;
+	&lt;h3&gt;Canvas coordinates diagram&lt;/h3&gt;
+	&lt;h2&gt;Paths&lt;/h2&gt;
+	&lt;/body&gt;
+									</code>
+									<code>
+	&lt;body&gt;
+	  &lt;h1&gt;Let's call it a draw(ing surface)&lt;/h1&gt;
+	  &lt;section&gt;
+	    &lt;h1&gt;Diving in&lt;/h1&gt;
+	  &lt;/section&gt;
+	  &lt;section&gt;
+	    &lt;h1&gt;Simple shapes&lt;/h1&gt;
+	  &lt;/section&gt;
+	  &lt;section&gt;
+	    &lt;h1&gt;Canvas coordinates&lt;/h1&gt;
+	    &lt;section&gt;
+	      &lt;h1&gt;Canvas coordinates diagram&lt;/h1&gt;
+	    &lt;/section&gt;
+	  &lt;/section&gt;
+	  &lt;section&gt;
+	   &lt;h1&gt;Paths&lt;/h1&gt;
+	  &lt;/section&gt;
+	&lt;/body&gt;
+								</code></pre>
+							</figure>
+							<figcaption><p>These two snippets are equivalent</p></figcaption>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h2>Grouping content</h2>
+					<ol>
+						<li>
+							<h4>The <strong><code>p</code></strong> element represents a paragraph.</h4>
+							<p>The <code>p</code> element should not be used when a more specific element is more appropriate like <code>address</code> element.</p>
+							<figure>
+								<pre><code>
+	&lt;section&gt;
+	  &lt;!-- ... --&gt;
+	  &lt;p&gt;Last modified: 2001-04-23&lt;/p&gt;
+	  &lt;p&gt;Author: fred@example.com&lt;/p&gt;
+	&lt;/section&gt;
+								</code></pre>
+								<figcaption>Above example is technically correct:</figcaption>	
+							</figure>
+							<figure>
+								<figcaption>However, it would be better marked-up as:</figcaption>	
+								<pre><code>
+	&lt;section&gt;
+	  &lt;!-- ... --&gt;
+	  &lt;footer&gt;Last modified: 2001-04-23&lt;/footer&gt;
+	  &lt;address&gt;Author: fred@example.com&lt;/address&gt;
+	&lt;/section&gt;
+								</code></pre>
+								<p>or</p>
+								<pre><code>
+	&lt;section&gt;
+	  &lt;!-- ... --&gt;
+	  &lt;footer&gt;
+	    &lt;p&gt;Last modified: 2001-04-23&lt;/p&gt;
+	    &lt;address&gt;Author: fred@example.com&lt;/address&gt;
+	  &lt;/footer&gt;
+	&lt;/section&gt;
+								</code></pre>
+							</figure>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</div>
+	</div>
+</body>
+</html>
